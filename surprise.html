@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <script>
+        var access = sessionStorage.getItem("accessGranted");
+    
+        if (access !== "yes") {
+            alert("Access denied! Redirecting...");
+            window.location.href = "index.html";
+        }
+    </script>
+
+<script>
+    // Disable Right-Click
+    document.addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+    });
+
+    // Disable Developer Tools (F12)
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+            event.preventDefault();
+        }
+    });
+</script>
+
+
+</head>
+<body>
+
+    <script>
+        if (sessionStorage.getItem("accessGranted") !== "yes") {
+            alert("Access denied! Redirecting...");
+            window.location.href = "index.html";
+        }
+    </script>
+    
+    <div class="container-surprise">
+        <h1>SUSANT KUMAR SINGH </h1>
+        <p>The G.O.A.T of the Day, as he turns 19!! 🎂 💖</p>
+
+        <div class="button-container">
+            <a href="about.html" class="btn">🎭 Meet Susant </a>
+            <a href="likes.html" class="btn">🎶 Favorites</a>
+            <a href="priorities.html" class="btn">🎯 Priorities</a>
+            <a href="timeline.html" class="btn">📅 Moments</a>
+            <a href="secret.html" class="btn">💌 Secret Message</a>
+
+        </div>
+
+        <a href="index.html" class="back-home">⬅ Back </a>
+    </div>
+</body>
+</html>
